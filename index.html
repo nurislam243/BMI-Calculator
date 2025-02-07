@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="coffee">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind css + daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-roboto{
+            font-family: "Roboto", serif;
+        }
+    </style>
+
 </head>
-<body>
-    
+<body class="h-full font-roboto mx-auto max-w-[720px] border rounded-xl mt-3 border-white">
+    <header class=" bg-gray-400 py-8 flex justify-center items-center rounded-tl-xl rounded-tr-xl">
+        <h1 class="text-white text-4xl">BMI Calculator</h1>
+    </header>
+    <main class="bg-slate-800 w-full">
+        <!-- section 1 -->
+        <section class="grid p-7 grid-cols-2 gap-9">
+            <!-- male card -->
+            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6">
+                <img src="images/mars.png" alt="" class="mx-auto">
+                <h3 class="text-white mt-10 text-2xl">
+                    Male
+                </h3>
+            </div>
+            <!-- Female card -->
+            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6">
+                <img src="images/Vector (2).png" alt="" class="mx-auto">
+                <h3 class="text-white mt-10 text-2xl">
+                    Female
+                </h3>
+            </div>
+        </section>
+
+        <!-- section 2 -->
+        <section class="p-7">
+            <!-- section 2 content -->
+            <div class="bg-slate-400 rounded-lg border border-gray-950 text-white py-8 flex flex-col items-center gap-y-5">
+                <div class="">
+                    <h3 class="">Height</h3>
+                </div>
+                <div class="">
+                    <label for="cars">Unit:</label>
+                    <select id="cars" name="cars">
+                    <option value="meter">Meter</option>
+                    <option value="centimeter">Centimeter</option>
+                    <option value="inch">Inch</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label for="input">
+                        Value: 
+                    </label>
+                    <input type="text" id="input">
+                </div>
+            </div>
+        </section>
+
+        <!-- section 3 -->
+        <section class="">
+
+        </section>
+    </main>
+    <footer class="bg-orange-400 w-full rounded-bl-xl rounded-br-xl py-6 flex justify-center items-center">
+        <button class="text-white btn bg-lime-500 py-3 px-4">Calculate</button>
+    </footer>
 </body>
 </html>
