@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
 
+    <!-- font awesome icon -->
+    <script src="https://kit.fontawesome.com/0018a649ef.js" crossorigin="anonymous"></script>
+
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,30 +53,63 @@
                 <div class="">
                     <h3 class="">Height</h3>
                 </div>
-                <div class="">
-                    <label for="cars">Unit:</label>
-                    <select id="cars" name="cars">
-                    <option value="meter">Meter</option>
-                    <option value="centimeter">Centimeter</option>
-                    <option value="inch">Inch</option>
+                <div class="space-x-3">
+                    <label for="cars">
+                        <span class="text-2xl">Unit:</span>
+                    </label>
+                    <select id="cars" name="cars" class="py-2 px-1 bg-white rounded-md outline-none text-black">
+                        <option value="meter">Meter</option>
+                        <option value="centimeter">Centimeter</option>
+                        <option value="inch">Inch</option>
                     </select>
                 </div>
-                <div class="">
+                <div class="space-x-3">
                     <label for="input">
-                        Value: 
+                        <span class="text-2xl">Value:</span> 
                     </label>
-                    <input type="text" id="input">
+                    <input type="text" id="input" placeholder="Your Height" class="bg-white rounded-md max-w-28 text-center  h-12 outline-none text-black">
                 </div>
             </div>
         </section>
 
         <!-- section 3 -->
         <section class="">
-
+            <section class="grid p-7 grid-cols-2 gap-9">
+                <!-- Wieght card -->
+                <div class="bg-gray-400 text-center border border-gray-950 space-y-3 rounded-lg py-6">
+                    <h4 class="text-white text-2xl">
+                        WIEGHT
+                    </h4>
+                    <h3 class="text-4xl text-black">0</h3>
+                    <div class="flex justify-center gap-7">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-900">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-800">
+                            <i class="fa-solid fa-minus"></i>
+                        </p>
+                    </div>
+                </div>
+                <!-- Age card -->
+                <div class="bg-gray-400 text-center border border-gray-950 space-y-3 rounded-lg py-6">
+                    <h4 class="text-white text-2xl">
+                        AGE
+                    </h4>
+                    <h3 class="text-4xl text-black">0</h3>
+                    <div class="flex justify-center gap-7">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-900">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-800">
+                            <i class="fa-solid fa-minus"></i>
+                        </p>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
-    <footer class="bg-orange-400 w-full rounded-bl-xl rounded-br-xl py-6 flex justify-center items-center">
-        <button class="text-white btn bg-lime-500 py-3 px-4">Calculate</button>
+    <footer class="bg-cyan-200 w-full rounded-bl-xl rounded-br-xl py-6 flex justify-center items-center">
+        <h2 class="text-white text-[25px] bg-pink-500 py-2 rounded-md px-6">Calculate</h2>
     </footer>
 </body>
 </html>
