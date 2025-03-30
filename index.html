@@ -23,22 +23,22 @@
     </style>
 
 </head>
-<body class="h-full font-roboto mx-auto max-w-[720px] border rounded-xl mt-3 border-white">
+<body class="h-full font-roboto mx-auto max-w-[720px] border rounded-xl mt-0 md:mt-3 border-white">
     <header class=" bg-gray-400 py-8 flex justify-center items-center rounded-tl-xl rounded-tr-xl">
         <h1 class="text-white text-4xl">BMI Calculator</h1>
     </header>
     <main class="bg-slate-800 w-full">
         <!-- section 1 -->
-        <section class="grid p-7 grid-cols-2 gap-9">
+        <section id="gender" class="grid p-7 grid-cols-2 gap-9">
             <!-- male card -->
-            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6">
+            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6 cursor-pointer hover:bg-red-300 gender-btn">
                 <img src="images/mars.png" alt="" class="mx-auto">
                 <h3 class="text-white mt-10 text-2xl">
                     Male
                 </h3>
             </div>
             <!-- Female card -->
-            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6">
+            <div class="bg-gray-400 text-center border border-gray-950 rounded-lg py-6 cursor-pointer hover:bg-red-300 gender-btn">
                 <img src="images/Vector (2).png" alt="" class="mx-auto">
                 <h3 class="text-white mt-10 text-2xl">
                     Female
@@ -51,23 +51,23 @@
             <!-- section 2 content -->
             <div class="bg-slate-400 rounded-lg border border-gray-950 text-white py-8 flex flex-col items-center gap-y-5">
                 <div class="">
-                    <h3 class="">Height</h3>
+                    <h3 class="text-3xl cursor-default">Height</h3>
                 </div>
                 <div class="space-x-3">
                     <label for="cars">
                         <span class="text-2xl">Unit:</span>
                     </label>
-                    <select id="cars" name="cars" class="py-2 px-1 bg-white rounded-md outline-none text-black">
-                        <option value="meter">Meter</option>
-                        <option value="centimeter">Centimeter</option>
-                        <option value="inch">Inch</option>
+                    <select id="cars" name="cars" class="py-2 px-1 bg-white rounded-md outline-none text-black cursor-pointer">
+                        <option class="cursor-pointer" value="meter">Meter</option>
+                        <option class="cursor-pointer" value="centimeter">Centimeter</option>
+                        <option class="cursor-pointer" value="inch">Inch</option>
                     </select>
                 </div>
                 <div class="space-x-3">
                     <label for="input">
                         <span class="text-2xl">Value:</span> 
                     </label>
-                    <input type="text" id="input" placeholder="Your Height" class="bg-white rounded-md max-w-28 text-center  h-12 outline-none text-black">
+                    <input type="text" id="input" placeholder="Your Height" class="bg-white px-2 rounded-md max-w-28 h-12 outline-none text-black">
                 </div>
             </div>
         </section>
@@ -80,12 +80,12 @@
                     <h4 class="text-white text-2xl">
                         WIEGHT
                     </h4>
-                    <h3 class="text-4xl text-black">0</h3>
+                    <input type="text" placeholder="0" class="bg-white text-black p-2 max-w-24 rounded-md">
                     <div class="flex justify-center gap-7">
-                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-900">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center cursor-pointer text-gray-900 hover:bg-red-300">
                             <i class="fa-solid fa-plus"></i>
                         </p>
-                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-800">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center cursor-pointer text-gray-800 hover:bg-red-300">
                             <i class="fa-solid fa-minus"></i>
                         </p>
                     </div>
@@ -95,12 +95,12 @@
                     <h4 class="text-white text-2xl">
                         AGE
                     </h4>
-                    <h3 class="text-4xl text-black">0</h3>
+                    <input type="text" placeholder="0" class="bg-white text-black p-2 max-w-24 rounded-md">
                     <div class="flex justify-center gap-7">
-                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-900">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center cursor-pointer text-gray-900 hover:bg-red-300">
                             <i class="fa-solid fa-plus"></i>
                         </p>
-                        <p class="bg-white p-2 rounded-full flex justify-center items-center text-gray-800">
+                        <p class="bg-white p-2 rounded-full flex justify-center items-center cursor-pointer text-gray-800 hover:bg-red-300">
                             <i class="fa-solid fa-minus"></i>
                         </p>
                     </div>
@@ -109,7 +109,9 @@
         </section>
     </main>
     <footer class="bg-cyan-200 w-full rounded-bl-xl rounded-br-xl py-6 flex justify-center items-center">
-        <h2 class="text-white text-[25px] bg-pink-500 py-2 rounded-md px-6">Calculate</h2>
+        <h2 class="text-white text-[25px] cursor-pointer bg-pink-500 hover:bg-red-300 py-2 rounded-md px-6">Calculate</h2>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
